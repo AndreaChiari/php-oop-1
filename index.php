@@ -6,6 +6,7 @@ class Movie
     public $director;
     public $year;
     public $length;
+    public $genre;
 
     public function __construct($name, $director, $year, $length)
     {
@@ -34,8 +35,9 @@ class Movie
     }
 }
 
-$space_odissey = new Movie('2001: Odissea nello spazio', 'Stanley Kubrick', 1968, 139);
-$carnage = new Movie('Carnage', 'Roman Polansky', 2011, 79);
+$space_odissey = new Movie('2001: Odissea nello spazio', 'Stanley Kubrick', 1968, 139,"fantascienza");
+$carnage = new Movie('Carnage', 'Roman Polansky', 2011, 79,"drammatico");
+$genre = new Movie('Interstellar','Cristopher Nolan',2014,169,'fantascienza')
 
 var_dump($space_odissey);
 var_dump($carnage);
