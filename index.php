@@ -15,21 +15,21 @@ class Movie
         $this->length = $length;
     }
 
-    public function durata($length, $name)
+    public function durata()
     {
-        if ($length > 120)
-            return "$name e' un film lungo dalla durata di $length minuti";
+        if ($this->length > 120)
+            return "$this->name e' un film lungo dalla durata di $this->length minuti";
         else
-            return "$name e' un film corto dalla durata di $length minuti";
+            return "$this->name e' un film corto dalla durata di $this->length minuti";
     }
 
-    public function isOld($year, $name)
+    public function isOld()
     {
 
-        if ($year < 2000) {
-            return "$name e' un film vecchio datato $year";
+        if ($this->year < 2000) {
+            return "$this->name e' un film vecchio datato $this->year";
         } else {
-            return "$name e' un film recente datato $year";
+            return "$this->name e' un film recente datato $this->year";
         }
     }
 }
@@ -40,7 +40,7 @@ $carnage = new Movie('Carnage', 'Roman Polansky', 2011, 79);
 var_dump($space_odissey);
 var_dump($carnage);
 
-echo $space_odissey->durata(139, '2001: Odissea nello spazio');
-echo $carnage->durata(79, 'Carnage');
-echo $space_odissey->isOld(1968, '2001: Odissea nello spazio');
-echo $space_odissey->isOld(2011, 'Carnage');
+echo $space_odissey->durata();
+echo $carnage->durata();
+echo $space_odissey->isOld();
+echo $carnage->isOld();
